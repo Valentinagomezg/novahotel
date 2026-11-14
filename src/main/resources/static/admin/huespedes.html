@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gestión de huéspedes de NOVA Hotels.">
+  <title>Huéspedes | NOVA Hotels</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/admin.css?v=20261108a">
+</head>
+<body>
+
+  <div class="admin">
+    <aside class="sidebar">
+      <a class="brand sidebar__brand" href="../index.html">
+        <span class="brand__mark">N</span>
+        <span class="brand__text">
+          <span class="brand__name">NOVA Hotels</span>
+          <span class="brand__tag">Hotel &amp; Resort</span>
+        </span>
+      </a>
+
+      <span class="sidebar__label">General</span>
+      <nav class="sidebar__nav">
+        <a href="dashboard.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          Dashboard
+        </a>
+        <a href="reservas.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+          Reservas
+        </a>
+        <a href="habitaciones.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M2 16h20"/><path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/></svg>
+          Habitaciones
+        </a>
+        <a href="huespedes.html" class="is-active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Huéspedes
+        </a>
+      </nav>
+
+      <span class="sidebar__label">Sistema</span>
+      <nav class="sidebar__nav">
+        <a href="../index.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Ver sitio web
+        </a>
+        <a href="../login.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+          Cerrar sesión
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <div class="sidebar__help">
+          <strong>¿Necesitas ayuda?</strong>
+          <p>Consulta la guía de operaciones o contacta con soporte.</p>
+          <a href="#">Abrir centro de ayuda</a>
+        </div>
+        <div class="sidebar__user">
+          <span class="sidebar__avatar">AD</span>
+          <div>
+            <strong>Administrador</strong>
+            <span>Recepción</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="admin__main">
+      <header class="topbar">
+        <div class="topbar__title">
+          <h1>Huéspedes</h1>
+          <p>Directorio de huéspedes, estancias y fidelidad</p>
+        </div>
+        <div class="topbar__actions">
+          <label class="topbar__search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="search" id="admin-top-search" placeholder="Buscar huésped...">
+          </label>
+          <button class="icon-btn" aria-label="Notificaciones">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </button>
+          <a class="btn-admin btn-admin--gold" href="../login.html#registro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            Nuevo huésped
+          </a>
+        </div>
+      </header>
+
+      <main class="admin__content">
+        <div class="admin-grid admin-grid--spaced">
+          <article class="stat-card">
+            <div class="stat-card__top">
+              <span class="stat-card__label">Total</span>
+              <span class="stat-card__icon">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+            </div>
+            <div class="stat-card__value" id="huespedes-total">0</div>
+            <div class="stat-card__foot"><span>Huéspedes registrados</span></div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card__top">
+              <span class="stat-card__label">En estancia</span>
+              <span class="stat-card__icon stat-card__icon--green">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+            </div>
+            <div class="stat-card__value" id="huespedes-activos">0</div>
+            <div class="stat-card__foot"><span>Con reservas activas</span></div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card__top">
+              <span class="stat-card__label">Frecuentes</span>
+              <span class="stat-card__icon stat-card__icon--blue">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </span>
+            </div>
+            <div class="stat-card__value" id="huespedes-frecuentes">0</div>
+            <div class="stat-card__foot"><span>Dos o más reservas</span></div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card__top">
+              <span class="stat-card__label">Ingresos</span>
+              <span class="stat-card__icon stat-card__icon--red">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </span>
+            </div>
+            <div class="stat-card__value" id="huespedes-gastado">0 €</div>
+            <div class="stat-card__foot"><span>Facturación acumulada</span></div>
+          </article>
+        </div>
+
+        <nav class="admin-tabs">
+          <a href="#" class="is-active" data-filtro="Todos">Todos <span class="tab-count" data-count>0</span></a>
+          <a href="#" data-filtro="En estancia">En estancia <span class="tab-count" data-count>0</span></a>
+          <a href="#" data-filtro="Frecuentes">Frecuentes <span class="tab-count" data-count>0</span></a>
+          <a href="#" data-filtro="Administradores">Administradores <span class="tab-count" data-count>0</span></a>
+        </nav>
+
+        <div class="toolbar">
+          <div class="toolbar__group">
+            <label class="toolbar__search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+              <input type="search" id="huespedes-search" placeholder="Buscar por nombre, email o teléfono...">
+            </label>
+            <select class="select" id="huespedes-rol" aria-label="Filtrar por rol">
+              <option>Todos</option>
+              <option>Usuario</option>
+              <option>Administrador</option>
+            </select>
+            <select class="select" id="huespedes-orden" aria-label="Ordenar huéspedes">
+              <option value="reciente">Más recientes</option>
+              <option value="nombre">Nombre (A-Z)</option>
+              <option value="gasto">Mayor gasto</option>
+              <option value="reservas">Más reservas</option>
+            </select>
+          </div>
+          <div class="toolbar__group">
+            <button class="btn-admin btn-admin--ghost" id="huespedes-export">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+              Exportar
+            </button>
+          </div>
+        </div>
+
+        <article class="card guest-directory">
+          <div class="card__head">
+            <div>
+              <h2>Listado de huéspedes</h2>
+              <p id="huespedes-count">Cargando huéspedes...</p>
+            </div>
+          </div>
+          <div class="card__body card__body--flush">
+            <div class="table-wrap" id="huespedes-table-wrap" hidden>
+              <table class="data guest-table">
+                <thead>
+                  <tr>
+                    <th>Huésped</th>
+                    <th>Contacto</th>
+                    <th>Reservas</th>
+                    <th>Gastado</th>
+                    <th>Última reserva</th>
+                    <th>Estado</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="huespedes-tbody"></tbody>
+              </table>
+            </div>
+            <div class="empty-state" id="huespedes-empty">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <strong>No hay huéspedes registrados</strong>
+              <p>Los huéspedes que se registren aparecerán aquí.</p>
+              <a class="btn-admin btn-admin--gold" href="../login.html#registro">Nuevo huésped</a>
+            </div>
+          </div>
+        </article>
+      </main>
+    </div>
+  </div>
+
+  <div class="admin-modal" id="huespede-modal" hidden>
+    <div class="admin-modal__backdrop" data-close-modal></div>
+    <div class="admin-modal__panel admin-modal__panel--guest" role="dialog" aria-modal="true" aria-labelledby="huespede-modal-title">
+      <header class="admin-modal__head">
+        <div>
+          <h2 id="huespede-modal-title">Huésped</h2>
+          <p id="huespede-modal-subtitle"></p>
+        </div>
+        <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar detalle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </header>
+      <div class="admin-modal__body" id="huespede-modal-body"></div>
+      <footer class="admin-modal__foot">
+        <button class="btn-admin btn-admin--ghost" type="button" data-close-modal>Cerrar</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="../js/admin-common.js?v=20261108a"></script>
+  <script src="../js/admin-huespedes.js?v=20261108a"></script>
+
+</body>
+</html>

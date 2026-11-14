@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gestión de reservas de NOVA Hotels.">
+  <title>Reservas | NOVA Hotels</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/admin.css?v=20261107a">
+</head>
+<body>
+
+  <div class="admin">
+    <aside class="sidebar">
+      <a class="brand sidebar__brand" href="../index.html">
+        <span class="brand__mark">N</span>
+        <span class="brand__text">
+          <span class="brand__name">NOVA Hotels</span>
+          <span class="brand__tag">Hotel &amp; Resort</span>
+        </span>
+      </a>
+
+      <span class="sidebar__label">General</span>
+      <nav class="sidebar__nav">
+        <a href="dashboard.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          Dashboard
+        </a>
+        <a href="reservas.html" class="is-active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+          Reservas
+        </a>
+        <a href="habitaciones.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M2 16h20"/><path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/></svg>
+          Habitaciones
+        </a>
+        <a href="huespedes.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Huéspedes
+        </a>
+      </nav>
+
+      <span class="sidebar__label">Sistema</span>
+      <nav class="sidebar__nav">
+        <a href="../index.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Ver sitio web
+        </a>
+        <a href="../login.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+          Cerrar sesión
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <div class="sidebar__help">
+          <strong>¿Necesitas ayuda?</strong>
+          <p>Consulta la guía de operaciones o contacta con soporte.</p>
+          <a href="#">Abrir centro de ayuda</a>
+        </div>
+        <div class="sidebar__user">
+          <span class="sidebar__avatar">AD</span>
+          <div>
+            <strong>Administrador</strong>
+            <span>Recepción</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="admin__main">
+      <header class="topbar">
+        <div class="topbar__title">
+          <h1>Reservas</h1>
+          <p>Gestiona las estancias y su estado en tiempo real</p>
+        </div>
+        <div class="topbar__actions">
+          <label class="topbar__search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="search" id="admin-top-search" placeholder="Buscar reserva, huésped...">
+          </label>
+          <button class="icon-btn" aria-label="Notificaciones">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </button>
+          <a class="btn-admin btn-admin--gold" href="../reservar.html">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            Nueva reserva
+          </a>
+        </div>
+      </header>
+
+      <main class="admin__content">
+        <nav class="admin-tabs">
+          <a href="#" class="is-active" data-estado="Todas">Todas <span class="tab-count" data-count="Todas">0</span></a>
+          <a href="#" data-estado="Confirmada">Confirmadas <span class="tab-count" data-count="Confirmada">0</span></a>
+          <a href="#" data-estado="Pendiente">Pendientes <span class="tab-count" data-count="Pendiente">0</span></a>
+          <a href="#" data-estado="Check-in">Check-in <span class="tab-count" data-count="Check-in">0</span></a>
+          <a href="#" data-estado="Cancelada">Canceladas <span class="tab-count" data-count="Cancelada">0</span></a>
+        </nav>
+
+        <div class="toolbar">
+          <div class="toolbar__group">
+            <label class="toolbar__search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+              <input type="search" id="reservas-search" placeholder="Buscar por huésped, correo o código...">
+            </label>
+            <select class="select" id="reservas-room" aria-label="Filtrar por habitación">
+              <option value="Todas">Todas las habitaciones</option>
+              <option value="clasica">Clásica</option>
+              <option value="deluxe">Deluxe</option>
+              <option value="nova">Suite Nova</option>
+            </select>
+            <select class="select" aria-label="Filtrar por fecha">
+              <option>Todas las fechas</option>
+              <option>Junio 2026</option>
+              <option>Julio 2026</option>
+              <option>Agosto 2026</option>
+              <option>Septiembre 2026</option>
+            </select>
+          </div>
+          <div class="toolbar__group">
+            <button class="btn-admin btn-admin--ghost" id="reservas-export" type="button">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+              Exportar CSV
+            </button>
+          </div>
+        </div>
+
+        <article class="card">
+          <div class="card__head">
+            <div>
+              <h2>Listado de reservas</h2>
+              <p id="reservas-count">Cargando reservas...</p>
+            </div>
+          </div>
+          <div class="card__body card__body--flush">
+            <div class="table-wrap" id="reservas-table-wrap" hidden>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>Reserva</th>
+                    <th>Huésped</th>
+                    <th>Estancia</th>
+                    <th>Habitación</th>
+                    <th>Huéspedes</th>
+                    <th>Extras</th>
+                    <th>Pago</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="reservas-tbody"></tbody>
+              </table>
+            </div>
+            <div class="empty-state" id="reservas-empty">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+              <strong>No hay reservas registradas</strong>
+              <p>Las reservas que se creen aparecerán aquí.</p>
+              <a class="btn-admin btn-admin--gold" href="../reservar.html">Nueva reserva</a>
+            </div>
+          </div>
+        </article>
+      </main>
+    </div>
+  </div>
+
+  <div class="admin-modal" id="reserva-modal" hidden>
+    <div class="admin-modal__backdrop" data-close-modal></div>
+    <div class="admin-modal__panel" role="dialog" aria-modal="true" aria-labelledby="reserva-modal-title">
+      <header class="admin-modal__head">
+        <div>
+          <h2 id="reserva-modal-title">Reserva</h2>
+          <p id="reserva-modal-subtitle"></p>
+        </div>
+        <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar detalle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </header>
+      <div class="admin-modal__body" id="reserva-modal-body"></div>
+      <footer class="admin-modal__foot">
+        <button class="btn-admin btn-admin--ghost" type="button" data-close-modal>Cerrar</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="../js/admin-common.js?v=20261107a"></script>
+  <script src="../js/admin-reservas.js?v=20261107a"></script>
+</body>
+</html>

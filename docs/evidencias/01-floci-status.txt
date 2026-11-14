@@ -1,0 +1,19 @@
+﻿# Evidencia 01 - floci-az inicializado
+
+## floci az status
+Floci Azure Status
+
+  Container:  floci-az  running
+  Image:      floci/floci-az:latest
+  Ports:      4577->4577/tcp 5672->5672/tcp 5673->5673/tcp
+  Endpoint:   http://localhost:4577
+  Reachable:  yes
+  Version:    0.16.0
+  Edition:    floci-az-always-free
+
+## Contenedores
+floci-az-sql-novahotel-sql | mcr.microsoft.com/mssql/server:2025-latest | Up 8 minutes | 0.0.0.0:64276->1433/tcp, [::]:64276->1433/tcp
+floci-az | floci/floci-az:latest | Up 9 minutes (healthy) | 0.0.0.0:4577->4577/tcp, [::]:4577->4577/tcp, 0.0.0.0:5672-5673->5672-5673/tcp, [::]:5672-5673->5672-5673/tcp
+
+## Conexion Azure SQL (/connect)
+{"server":"novahotel-sql","host":"floci-az-sql-novahotel-sql","port":1433,"database":"NovaHotelDB","jdbcUrl":"jdbc:sqlserver://floci-az-sql-novahotel-sql:1433;databaseName=NovaHotelDB;user=sa;password=NovaHotel!2026;encrypt=true;trustServerCertificate=true;","connectionString":"Server=tcp:floci-az-sql-novahotel-sql,1433;Initial Catalog=NovaHotelDB;Persist Security Info=False;User ID=sa;Password=NovaHotel!2026;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;","pyodbc":"DRIVER={ODBC Driver 18 for SQL Server};SERVER=floci-az-sql-novahotel-sql,1433;DATABASE=NovaHotelDB;UID=sa;PWD=NovaHotel!2026;TrustServerCertificate=yes;Encrypt=yes;","entityFramework":"Server=floci-az-sql-novahotel-sql,1433;Database=NovaHotelDB;User Id=sa;Password=NovaHotel!2026;Encrypt=True;TrustServerCertificate=True;"}

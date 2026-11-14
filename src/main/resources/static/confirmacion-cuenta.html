@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confirmación de cuenta de NOVA Hotels.">
+  <title>Confirmación de cuenta | NOVA Hotels</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/confirmacion-cuenta.css">
+</head>
+<body class="confirm-page">
+
+  <div class="confirm-page__backdrop" aria-hidden="true">
+    <span class="confirm-page__aurora confirm-page__aurora--gold"></span>
+    <span class="confirm-page__aurora confirm-page__aurora--teal"></span>
+    <span class="confirm-page__watermark">N</span>
+  </div>
+
+  <main class="confirm-main">
+    <a class="brand confirm-brand" href="index.html">
+      <span class="brand__mark">N</span>
+      <span class="brand__text">
+        <span class="brand__name">NOVA Hotels</span>
+        <span class="brand__tag">Hotel &amp; Resort</span>
+      </span>
+    </a>
+
+    <section class="confirm-card" aria-live="polite">
+      <ol class="confirm-steps" aria-label="Progreso de activación">
+        <li class="confirm-steps__item is-done">
+          <span class="confirm-steps__num">01</span>
+          <span class="confirm-steps__label">Registro</span>
+        </li>
+        <li class="confirm-steps__item is-active">
+          <span class="confirm-steps__num">02</span>
+          <span class="confirm-steps__label">Confirmación</span>
+        </li>
+        <li class="confirm-steps__item">
+          <span class="confirm-steps__num">03</span>
+          <span class="confirm-steps__label">Listo</span>
+        </li>
+      </ol>
+
+      <div class="confirm-card__icon-wrap">
+        <span class="confirm-card__icon" id="confirm-icon">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </span>
+      </div>
+
+      <p class="confirm-card__eyebrow" id="confirm-eyebrow">NOVA Club</p>
+      <h1 id="confirm-title">Cuenta confirmada</h1>
+      <p id="confirm-text">Tu correo se ha verificado correctamente. Ya puedes iniciar sesión y reservar tu próxima estancia en NOVA Hotels.</p>
+
+      <div class="confirm-card__actions">
+        <a class="confirm-btn confirm-btn--gold" id="confirm-primary" href="login.html">Iniciar sesión</a>
+        <a class="confirm-btn confirm-btn--ghost" href="index.html">Volver al inicio</a>
+      </div>
+
+      <p class="confirm-card__hint" id="confirm-hint">El enlace de confirmación caduca a las 48 horas.</p>
+
+      <form class="confirm-resend" id="confirm-resend" hidden>
+        <label class="confirm-resend__label" for="confirm-resend-correo">Correo electrónico</label>
+        <div class="confirm-resend__row">
+          <input type="email" id="confirm-resend-correo" placeholder="tu@correo.com" autocomplete="email" required>
+          <button type="submit">Reenviar</button>
+        </div>
+      </form>
+      <p class="confirm-resend-status" id="confirm-resend-status" hidden></p>
+    </section>
+
+    <p class="confirm-legal">© 2026 NOVA Hotels · 12 Boulevard de la Mer, Costa Azul</p>
+  </main>
+
+  <script>
+    (function () {
+      var API_BASE = (window.location.port === '8080') ? '' : 'http://localhost:8080';
+      var params = new URLSearchParams(window.location.search);
+      var estado = (params.get('estado') || '').toLowerCase();
+      var ok = estado === 'ok';
+
+      var icon = document.getElementById('confirm-icon');
+      var eyebrow = document.getElementById('confirm-eyebrow');
+      var title = document.getElementById('confirm-title');
+      var text = document.getElementById('confirm-text');
+      var primary = document.getElementById('confirm-primary');
+      var hint = document.getElementById('confirm-hint');
+      var resendForm = document.getElementById('confirm-resend');
+      var resendInput = document.getElementById('confirm-resend-correo');
+      var resendBtn = resendForm ? resendForm.querySelector('button') : null;
+      var resendStatus = document.getElementById('confirm-resend-status');
+
+      if (!ok) {
+        document.body.classList.add('confirm-page--error');
+        if (icon) {
+          icon.innerHTML = '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>';
+        }
+        if (eyebrow) eyebrow.textContent = 'No podemos confirmar tu cuenta';
+        if (title) title.textContent = 'Enlace no válido';
+        if (text) text.textContent = 'El enlace de confirmación no es válido o ha caducado. Solicita un nuevo correo de confirmación para activar tu cuenta.';
+        if (primary) {
+          primary.textContent = 'Ir al acceso';
+          primary.setAttribute('href', 'login.html');
+        }
+        if (hint) hint.textContent = 'Introduce tu correo y te enviaremos un nuevo enlace.';
+        if (resendForm) resendForm.hidden = false;
+      }
+
+      if (resendForm) {
+        resendForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          var correo = resendInput ? resendInput.value.trim() : '';
+          if (!correo) return;
+
+          if (resendBtn) resendBtn.disabled = true;
+          if (resendStatus) {
+            resendStatus.hidden = false;
+            resendStatus.textContent = 'Enviando un nuevo enlace...';
+          }
+
+          fetch(API_BASE + '/api/usuarios/reenviar-confirmacion', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ correo: correo })
+          })
+            .then(function (response) {
+              if (!response.ok) {
+                return response.text().then(function (mensaje) {
+                  throw new Error(mensaje || 'No se pudo reenviar el correo.');
+                });
+              }
+              return response.json();
+            })
+            .then(function () {
+              if (resendStatus) {
+                resendStatus.textContent = 'Correo reenviado. Revisa tu bandeja de entrada y la carpeta de spam.';
+              }
+              if (resendInput) resendInput.value = '';
+            })
+            .catch(function (error) {
+              if (resendStatus) {
+                resendStatus.textContent = error.message || 'No se pudo reenviar el correo.';
+              }
+            })
+            .finally(function () {
+              if (resendBtn) resendBtn.disabled = false;
+            });
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

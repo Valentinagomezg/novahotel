@@ -1,0 +1,494 @@
+.account-page {
+  background: var(--cream);
+}
+
+.account__hero {
+  padding: clamp(80px, 10vw, 140px) 0 56px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(201, 168, 106, 0.2), transparent 38%),
+    radial-gradient(circle at 12% 90%, rgba(47, 125, 114, 0.14), transparent 42%),
+    var(--ink);
+  color: var(--cream);
+}
+
+.account__hero .eyebrow {
+  color: var(--gold-light);
+}
+
+.account__hero .eyebrow::before {
+  background: var(--gold-light);
+}
+
+.account__hero h1 {
+  margin: 18px 0 16px;
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 7vw, 6.4rem);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+}
+
+.account__hero h1 em {
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.account__hero p {
+  max-width: 560px;
+  color: rgba(248, 245, 239, 0.64);
+  font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+}
+
+.account__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.account__card {
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.account__card--wide {
+  min-height: 360px;
+}
+
+.account__card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.account__card-kicker {
+  color: var(--gold-dark);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.account__card h2 {
+  margin-top: 6px;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.account__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 32px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+
+.account__empty-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(201, 168, 106, 0.14);
+  color: var(--gold-dark);
+}
+
+.account__empty h3 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.account__empty p {
+  max-width: 420px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.account__details {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.account__details div {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.account__details dt {
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.account__details dd {
+  margin-top: 4px;
+  font-size: 0.92rem;
+}
+
+.account__link {
+  color: var(--gold-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.account__link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .account__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account__card--wide {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .account__hero {
+    padding: 64px 0 36px;
+  }
+
+  .account__card-head {
+    flex-direction: column;
+  }
+
+  .account__empty {
+    padding: 24px;
+  }
+}
+
+.account__reservas {
+  display: grid;
+  gap: 16px;
+}
+
+.reserva {
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+
+.reserva__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reserva__estado {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(185, 129, 47, 0.12);
+  color: var(--warning);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.reserva__estado--confirmada {
+  background: rgba(47, 125, 91, 0.12);
+  color: var(--success);
+}
+
+.reserva__estado--cancelada {
+  background: rgba(176, 68, 60, 0.12);
+  color: var(--danger);
+}
+
+.reserva__id {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.reserva__titulo {
+  margin: 14px 0 4px;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.reserva__fechas {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.reserva__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 14px 0 16px;
+  color: var(--ink-muted);
+  font-size: 0.78rem;
+}
+
+.reserva__bottom {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.reserva__bottom span {
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.reserva__bottom strong {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.account__notice {
+  margin-bottom: 22px;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  background: rgba(47, 125, 91, 0.1);
+  border: 1px solid rgba(47, 125, 91, 0.22);
+  color: var(--success);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.account__notice--error {
+  background: rgba(176, 68, 60, 0.1);
+  border-color: rgba(176, 68, 60, 0.24);
+  color: var(--danger);
+}
+
+.account__notice[hidden] {
+  display: none;
+}
+
+.reserva__acciones {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+.reserva__cancelar {
+  padding: 8px 16px;
+  border: 1px solid rgba(176, 68, 60, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--danger);
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.reserva__cancelar:hover {
+  background: rgba(176, 68, 60, 0.1);
+  border-color: var(--danger);
+}
+
+.reserva__cancelar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.account__link {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.account__form {
+  display: grid;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.account__form[hidden],
+.account__form-error[hidden],
+.account__form-success[hidden] {
+  display: none;
+}
+
+.account__form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.account__form-field label {
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.account__form-field input {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--cream);
+  font-family: inherit;
+  font-size: 0.86rem;
+  outline: none;
+}
+
+.account__form-field input:focus {
+  border-color: var(--gold);
+}
+
+.account__form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.account__form-error {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(176, 68, 60, 0.1);
+  border: 1px solid rgba(176, 68, 60, 0.24);
+  color: var(--danger);
+  font-size: 0.78rem;
+}
+
+.account__form-success {
+  margin: 14px 0 0;
+  color: var(--success);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.account__form-field input {
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.account__form-field input:focus {
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.16);
+}
+
+.reserva {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.reserva::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--warning);
+}
+
+.reserva:has(.reserva__estado--confirmada)::before {
+  background: var(--success);
+}
+
+.reserva:has(.reserva__estado--check-in)::before {
+  background: var(--info);
+}
+
+.reserva:has(.reserva__estado--cancelada)::before {
+  background: var(--danger);
+}
+
+.reserva:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201, 168, 106, 0.45);
+  box-shadow: var(--shadow-sm);
+}
+
+.reserva__estado--check-in {
+  background: rgba(47, 111, 143, 0.12);
+  color: var(--info);
+}
+
+.reserva__top {
+  padding-right: 4px;
+}
+
+.reserva__cancelar:focus-visible {
+  outline: 2px solid var(--danger);
+  outline-offset: 2px;
+}
+
+@media (min-width: 901px) {
+  .account__grid > .account__card:not(.account__card--wide) {
+    position: sticky;
+    top: 110px;
+  }
+}
+
+.account__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.account__stats[hidden] {
+  display: none;
+}
+
+.account__stat {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--cream);
+}
+
+.account__stat span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.account__stat strong {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+@media (max-width: 700px) {
+  .account__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

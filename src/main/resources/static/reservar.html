@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserva tu estancia en NOVA Hotels. Elige fechas, habitación y confirma en minutos.">
+  <title>Reservar | NOVA Hotels</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <input type="checkbox" id="nav-check" class="nav-check">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">N</span>
+        <span class="brand__text">
+          <span class="brand__name">NOVA Hotels</span>
+          <span class="brand__tag">Hotel &amp; Resort</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Inicio</a>
+        <a href="habitaciones.html">Habitaciones</a>
+        <a href="reservar.html" class="is-active">Reservar</a>
+        <a href="index.html#experiencias">Experiencias</a>
+        <a href="login.html">Acceso</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <span class="site-header__phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +33 1 84 80 20 20
+        </span>
+        <a class="btn btn--gold btn--sm" href="reservar.html">Reservar ahora</a>
+        <label class="nav-toggle" for="nav-check" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <span>Reservar</span>
+      </div>
+      <h1>Reserva tu estancia</h1>
+      <p>Completa los datos y asegura tu habitación. Recibirás la confirmación por correo al instante.</p>
+      <div class="page-hero__points">
+        <span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          Mejor precio garantizado
+        </span>
+        <span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Cancelación flexible
+        </span>
+        <span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Confirmación inmediata
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container">
+      <form class="booking-layout" action="confirmacion.html">
+        <div class="booking-steps" aria-label="Tu reserva en cuatro pasos">
+          <div class="booking-step">
+            <span class="booking-step__num">01</span>
+            <span class="booking-step__text"><strong>Fechas</strong><small>Cuándo vienes</small></span>
+          </div>
+          <div class="booking-step">
+            <span class="booking-step__num">02</span>
+            <span class="booking-step__text"><strong>Habitación</strong><small>Tu espacio ideal</small></span>
+          </div>
+          <div class="booking-step">
+            <span class="booking-step__num">03</span>
+            <span class="booking-step__text"><strong>Huésped</strong><small>Tus datos</small></span>
+          </div>
+          <div class="booking-step">
+            <span class="booking-step__num">04</span>
+            <span class="booking-step__text"><strong>Pago</strong><small>Confirma seguro</small></span>
+          </div>
+        </div>
+
+        <div class="panel booking-panel">
+          <div class="panel__head booking-panel__head">
+            <div>
+              <span class="booking-panel__eyebrow">Reserva directa</span>
+              <h2>Detalles de la reserva</h2>
+              <span>Los campos marcados con * son obligatorios</span>
+            </div>
+            <span class="booking-panel__badge">
+              <i></i>
+              Sin cargos ocultos
+            </span>
+          </div>
+
+          <div class="panel__body booking-panel__body">
+            <div class="form-section">
+              <div class="form-section__title">
+                <span>01</span>
+                <h3>Fechas y huéspedes</h3>
+              </div>
+              <div class="form-grid form-grid--three">
+                <div class="field">
+                  <label for="llegada">Fecha de llegada *</label>
+                  <input type="date" id="llegada" name="llegada" required>
+                </div>
+                <div class="field">
+                  <label for="salida">Fecha de salida *</label>
+                  <input type="date" id="salida" name="salida" required>
+                </div>
+                <div class="field">
+                  <label for="noches">Noches</label>
+                  <input type="text" id="noches" name="noches" placeholder="—" readonly>
+                </div>
+                <div class="field">
+                  <label for="adultos">Adultos *</label>
+                  <select id="adultos" name="adultos" required>
+                    <option value="" selected>Selecciona</option>
+                    <option value="1">1 adulto</option>
+                    <option value="2">2 adultos</option>
+                    <option value="3">3 adultos</option>
+                    <option value="4">4 adultos</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="ninos">Niños</label>
+                  <select id="ninos" name="ninos">
+                    <option value="" selected>Selecciona</option>
+                    <option value="0">Sin niños</option>
+                    <option value="1">1 niño</option>
+                    <option value="2">2 niños</option>
+                    <option value="3">3 niños</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="llegada-hora">Hora estimada de llegada</label>
+                  <select id="llegada-hora" name="llegada-hora">
+                    <option selected>Selecciona una hora</option>
+                    <option>Antes de las 15:00</option>
+                    <option>15:00 - 18:00</option>
+                    <option>18:00 - 21:00</option>
+                    <option>Después de las 21:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section__title">
+                <span>02</span>
+                <h3>Elige tu habitación</h3>
+              </div>
+              <div class="radio-row">
+                <div class="radio-card radio-card--room radio-card--clasica">
+                  <input type="radio" id="room-clasica" name="habitacion" value="clasica" required>
+                  <label for="room-clasica">
+                    <span class="radio-card__visual" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v7"/><path d="M2 16h20"/><path d="M6 11V7a1 1 0 0 1 1-1h3v5"/><path d="M13 11V6h4a1 1 0 0 1 1 1v4"/><path d="M2 20v2"/><path d="M22 20v2"/></svg>
+                    </span>
+                    <span class="radio-card__content">
+                      <strong>Clásica</strong>
+                      <span class="radio-card__detail">28 m² · 2 personas · 180 €/noche</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="radio-card radio-card--room radio-card--deluxe">
+                  <input type="radio" id="room-deluxe" name="habitacion" value="deluxe">
+                  <label for="room-deluxe">
+                    <span class="radio-card__visual" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.42 1.42"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+                    </span>
+                    <span class="radio-card__badge">Más elegida</span>
+                    <span class="radio-card__content">
+                      <strong>Deluxe</strong>
+                      <span class="radio-card__detail">36 m² · 2 personas · 240 €/noche</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="radio-card radio-card--room radio-card--nova">
+                  <input type="radio" id="room-nova" name="habitacion" value="nova">
+                  <label for="room-nova">
+                    <span class="radio-card__visual" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l4 3 5-6 5 6 4-3-2 11H5L3 8z"/><path d="M5 19h14"/></svg>
+                    </span>
+                    <span class="radio-card__badge">Signature</span>
+                    <span class="radio-card__content">
+                      <strong>Suite Nova</strong>
+                      <span class="radio-card__detail">68 m² · 4 personas · 480 €/noche</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="field field--spaced">
+                <label for="extras">Servicios adicionales</label>
+                  <select id="extras" name="extras">
+                    <option selected>Selecciona un extra (opcional)</option>
+                    <option>Sin extras</option>
+                  <option>Traslado aeropuerto · 60 €</option>
+                  <option>Cena romántica · 120 €</option>
+                  <option>Ritual spa para dos · 90 €</option>
+                  <option>Pack bienvenida · 45 €</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section__title">
+                <span>03</span>
+                <h3>Datos del huésped</h3>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="nombre">Nombre *</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Nombre del titular" required>
+                </div>
+                <div class="field">
+                  <label for="apellidos">Apellidos *</label>
+                  <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos del titular" required>
+                </div>
+                <div class="field">
+                  <label for="email">Correo electrónico *</label>
+                  <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
+                </div>
+                <div class="field">
+                  <label for="telefono">Teléfono *</label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" required>
+                </div>
+                <div class="field">
+                  <label for="pais">País</label>
+                  <select id="pais" name="pais">
+                    <option selected>Selecciona un país</option>
+                    <option>España</option>
+                    <option>Francia</option>
+                    <option>Portugal</option>
+                    <option>Italia</option>
+                    <option>Reino Unido</option>
+                    <option>Estados Unidos</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="ciudad">Ciudad</label>
+                  <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad de residencia">
+                </div>
+                <div class="field field--full">
+                  <label for="peticiones">Peticiones especiales</label>
+                  <textarea id="peticiones" name="peticiones" placeholder="Alergias, preferencias de almohada, celebración especial..."></textarea>
+                  <span class="field__hint">Haremos todo lo posible por atender tu solicitud.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section__title">
+                <span>04</span>
+                <h3>Método de pago</h3>
+              </div>
+              <div class="radio-row">
+                <div class="radio-card radio-card--pay">
+                  <input type="radio" id="pago-tarjeta" name="pago" value="tarjeta" required>
+                  <label for="pago-tarjeta">
+                    <strong>Tarjeta</strong>
+                    <span>Visa, Mastercard, Amex</span>
+                  </label>
+                </div>
+                <div class="radio-card radio-card--pay">
+                  <input type="radio" id="pago-transferencia" name="pago" value="transferencia">
+                  <label for="pago-transferencia">
+                    <strong>Transferencia</strong>
+                    <span>Recibirás los datos por correo</span>
+                  </label>
+                </div>
+                <div class="radio-card radio-card--pay">
+                  <input type="radio" id="pago-hotel" name="pago" value="hotel">
+                  <label for="pago-hotel">
+                    <strong>Pagar en el hotel</strong>
+                    <span>Disponible para estancias de 2+ noches</span>
+                  </label>
+                </div>
+              </div>
+              <div class="payment-card-fields form-grid form-grid--spaced" id="payment-card-fields" hidden>
+                <div class="field field--full">
+                  <label for="tarjeta">Número de tarjeta</label>
+                  <input type="text" id="tarjeta" name="tarjeta" placeholder="0000 0000 0000 0000" inputmode="numeric">
+                </div>
+                <div class="field">
+                  <label for="caducidad">Caducidad</label>
+                  <input type="text" id="caducidad" name="caducidad" placeholder="MM/AA">
+                </div>
+                <div class="field">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="123" inputmode="numeric">
+                </div>
+              </div>
+              <label class="checkbox-row checkbox-row--spaced">
+                <input type="checkbox" name="politicas" required>
+                <span>He leído y acepto las políticas de reserva, cancelación y privacidad de NOVA Hotels. *</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <aside class="summary">
+          <div class="panel summary__panel">
+            <div class="panel__head summary__head">
+              <div>
+                <span class="summary__eyebrow">Tu estancia</span>
+                <h3>Resumen</h3>
+              </div>
+              <span class="summary__live"><i></i> En vivo</span>
+            </div>
+            <div class="panel__body">
+              <div class="summary__room">
+                <div class="summary__thumb" aria-hidden="true"></div>
+                <div class="summary__room-info">
+                  <span class="summary__room-label">Habitación</span>
+                  <h3 id="res-room-title">Sin habitación seleccionada</h3>
+                  <p id="res-room-detail">Elige una habitación para ver los detalles</p>
+                </div>
+              </div>
+
+              <div class="summary__lines">
+                <div class="summary__line">
+                  <span>Llegada</span>
+                  <strong id="res-llegada">—</strong>
+                </div>
+                <div class="summary__line">
+                  <span>Salida</span>
+                  <strong id="res-salida">—</strong>
+                </div>
+                <div class="summary__line">
+                  <span>Huéspedes</span>
+                  <strong id="res-huespedes">—</strong>
+                </div>
+                <div class="summary__line">
+                  <span>Noches</span>
+                  <strong id="res-noches">—</strong>
+                </div>
+                <div class="summary__line">
+                  <span>Precio por noche</span>
+                  <strong id="res-precio">—</strong>
+                </div>
+                <div class="summary__line">
+                  <span>Tasas e impuestos</span>
+                  <strong id="res-tasas">—</strong>
+                </div>
+              </div>
+
+              <div class="summary__total">
+                <span>Total</span>
+                <strong id="res-total">—</strong>
+              </div>
+
+              <div class="summary__note">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>No se realizará ningún cargo ahora. Cancelación gratuita hasta 48 h antes de la llegada.</span>
+              </div>
+
+              <p class="booking-error" id="booking-error" role="alert" hidden></p>
+
+              <button class="btn btn--gold btn--block" type="submit">Confirmar reserva</button>
+
+              <div class="summary__note summary__note--spaced">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>Pago seguro y cifrado. Tus datos nunca se comparten con terceros.</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__col">
+          <a class="brand" href="index.html">
+            <span class="brand__mark">N</span>
+            <span class="brand__text">
+              <span class="brand__name">NOVA Hotels</span>
+              <span class="brand__tag">Hotel &amp; Resort</span>
+            </span>
+          </a>
+          <p>Un hotel boutique frente al mar donde cada estancia se convierte en un recuerdo. Costa Azul, Francia.</p>
+        </div>
+        <div class="site-footer__col">
+          <h4>El hotel</h4>
+          <div class="site-footer__links">
+            <a href="habitaciones.html">Habitaciones</a>
+            <a href="index.html#experiencias">Experiencias</a>
+            <a href="reservar.html">Reservas</a>
+            <a href="login.html">Área de huéspedes</a>
+          </div>
+        </div>
+        <div class="site-footer__col">
+          <h4>Servicios</h4>
+          <div class="site-footer__links">
+            <a href="#">Restaurante</a>
+            <a href="#">Spa &amp; bienestar</a>
+            <a href="#">Eventos privados</a>
+            <a href="#">Traslados</a>
+          </div>
+        </div>
+        <div class="site-footer__col">
+          <h4>Contacto</h4>
+          <ul class="site-footer__contact">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              12 Boulevard de la Mer, Costa Azul
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +33 1 84 80 20 20
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              reservas@novahotels.com
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 NOVA Hotels. Todos los derechos reservados.</span>
+        <div class="site-footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 21c.5-2 1.5-5 1.8-6.4"/><path d="M10.6 14.4c-.6-1.4.2-3.4 2-3.4 1.5 0 2.2 1 2.2 2.3 0 1.8-1 3.5-2.4 3.5-.9 0-1.6-.7-1.4-1.6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/reservar.js"></script>
+</body>
+</html>

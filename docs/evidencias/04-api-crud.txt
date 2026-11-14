@@ -1,0 +1,7 @@
+﻿== POST /api/habitaciones ==
+HTTP 201
+{"ocupadaHoy":false,"idHabitacion":1,"numero":"101","tipo":"clasica","planta":1,"capacidad":2,"precioNoche":180.00,"estado":"Disponible"}
+
+== GET /api/habitaciones ==
+HTTP 200
+[{"ocupadaHoy":false,"idHabitacion":1,"numero":"101","tipo":"clasica","planta":1,"capacidad":2,"precioNoche":180.00,"estado":"Disponible"}]

@@ -1,0 +1,18 @@
+services:
+  floci-az:
+    image: floci/floci-az:latest
+    container_name: floci-az
+    restart: unless-stopped
+    ports:
+      - "4577:4577"
+      - "5672:5672"
+      - "5673:5673"
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+      - ./.floci-az-data:/app/data
+    environment:
+      FLOCI_AZ_STORAGE_MODE: hybrid
+      FLOCI_AZ_SERVICES_SQL_ENABLED: "true"
+      FLOCI_AZ_SERVICES_SQL_DATA_PLANE_PROVIDER: managed
+      FLOCI_AZ_SERVICES_SQL_ACCEPT_EULA: "Y"
+      FLOCI_AZ_SERVICES_SQL_STARTUP_TIMEOUT_SECONDS: "180"

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOVA Hotels, hotel boutique frente al mar. Habitaciones exclusivas, gastronomía de autor y experiencias inolvidables.">
+  <title>NOVA Hotels | Hotel &amp; Resort</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <input type="checkbox" id="nav-check" class="nav-check">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">N</span>
+        <span class="brand__text">
+          <span class="brand__name">NOVA Hotels</span>
+          <span class="brand__tag">Hotel &amp; Resort</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="is-active">Inicio</a>
+        <a href="habitaciones.html">Habitaciones</a>
+        <a href="reservar.html">Reservar</a>
+        <a href="index.html#experiencias">Experiencias</a>
+        <a href="login.html">Acceso</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <span class="site-header__phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +33 1 84 80 20 20
+        </span>
+        <a class="btn btn--gold btn--sm" href="reservar.html">Reservar ahora</a>
+        <label class="nav-toggle" for="nav-check" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <span class="eyebrow">Costa Azul · Desde 1924</span>
+          <h1>El arte de <em>descansar</em> junto al mar</h1>
+          <p>Un refugio boutique donde la arquitectura clásica se encuentra con el confort contemporáneo. Habitaciones únicas, gastronomía de autor y vistas que se quedan contigo.</p>
+          <div class="hero__actions">
+            <a class="btn btn--gold" href="reservar.html">Reservar una estancia</a>
+            <a class="btn btn--outline" href="habitaciones.html">Explorar habitaciones</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <strong>48</strong>
+              <span>Habitaciones únicas</span>
+            </div>
+            <div class="hero__stat">
+              <strong>4.9</strong>
+              <span>Valoración media</span>
+            </div>
+            <div class="hero__stat">
+              <strong>100</strong>
+              <span>Años de historia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__frame">
+            <span class="hero__frame-lines"></span>
+          </div>
+          <div class="hero__badge">
+            <span class="hero__badge-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            </span>
+            <div>
+              <strong>Suite Nova</strong>
+              <span>Vista panorámica al mar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container booking-bar">
+      <form class="booking-bar__card" action="reservar.html">
+        <div class="booking-field">
+          <label for="llegada">Llegada</label>
+          <input type="date" id="llegada" name="llegada">
+        </div>
+        <div class="booking-field">
+          <label for="salida">Salida</label>
+          <input type="date" id="salida" name="salida">
+        </div>
+        <div class="booking-field">
+          <label for="huespedes">Huéspedes</label>
+          <select id="huespedes" name="huespedes">
+            <option>2 adultos</option>
+            <option>1 adulto</option>
+            <option>2 adultos + 1 niño</option>
+            <option>3 adultos</option>
+            <option>4 adultos</option>
+          </select>
+        </div>
+        <div class="booking-field">
+          <label for="tipo">Habitación</label>
+          <select id="tipo" name="tipo">
+            <option>Todas las categorías</option>
+            <option>Clásica</option>
+            <option>Deluxe</option>
+            <option>Suite</option>
+            <option>Suite Nova</option>
+          </select>
+        </div>
+        <div class="booking-bar__action">
+          <button class="btn btn--dark" type="submit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            Buscar disponibilidad
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Habitaciones destacadas</span>
+        <h2>Espacios pensados para quedarse</h2>
+        <p>Cada habitación combina materiales nobles, luz natural y detalles artesanales para crear una atmósfera propia.</p>
+      </div>
+
+      <div class="featured-grid">
+        <article class="room-card">
+          <div class="room-card__media">
+            <span class="room-card__tag">Clásica</span>
+            <div class="room-card__price"><strong>180 €</strong> <span>/ noche</span></div>
+          </div>
+          <div class="room-card__body">
+            <div class="room-card__meta">
+              <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M2 16h20"/><path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/></svg> 28 m²</span>
+              <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 2 personas</span>
+            </div>
+            <h3>Habitación Clásica</h3>
+            <p>Madera de roble, textiles de lino y un balcón privado con vistas al jardín interior.</p>
+            <div class="room-card__footer">
+              <a class="link-arrow" href="reservar.html">Reservar
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-card__media room-card__media--gold">
+            <span class="room-card__tag">Suite</span>
+            <div class="room-card__price"><strong>320 €</strong> <span>/ noche</span></div>
+          </div>
+          <div class="room-card__body">
+            <div class="room-card__meta">
+              <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M2 16h20"/><path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/></svg> 46 m²</span>
+              <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 3 personas</span>
+            </div>
+            <h3>Suite Deluxe</h3>
+            <p>Salón independiente, bañera de pie y terraza privada orientada al atardecer.</p>
+            <div class="room-card__footer">
+              <a class="link-arrow" href="reservar.html">Reservar
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-card__media room-card__media--green">
+            <span class="room-card__tag">Signature</span>
+            <div class="room-card__price"><strong>480 €</strong> <span>/ noche</span></div>
+          </div>
+          <div class="room-card__body">
+            <div class="room-card__meta">
+              <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M2 16h20"/><path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/></svg> 68 m²</span>
+              <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 4 personas</span>
+            </div>
+            <h3>Suite Nova</h3>
+            <p>Nuestra joya: ático con piscina privada, chimenea y vista de 180° sobre la costa.</p>
+            <div class="room-card__footer">
+              <a class="link-arrow" href="reservar.html">Reservar
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-foot">
+        <a class="btn btn--outline-dark" href="habitaciones.html">Ver todas las habitaciones</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="experiencias">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">La experiencia</span>
+        <h2>Todo lo que necesitas, nada que te distraiga</h2>
+        <p>Servicios pensados con la misma obsesión por el detalle que nuestras habitaciones.</p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature">
+          <span class="feature__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/></svg>
+          </span>
+          <h3>Desayuno de autor</h3>
+          <p>Producto local, pan artesanal y repostería horneada cada mañana frente al mar.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v8"/><path d="M18 3c-1.5 2-2 4-2 7s.5 5 2 7"/></svg>
+          </span>
+          <h3>Spa &amp; bienestar</h3>
+          <p>Circuito de aguas, masajes personalizados y rituales inspirados en el Mediterráneo.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M5 12V6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6"/><path d="M7 12v8"/><path d="M17 12v8"/><path d="M4 20h16"/></svg>
+          </span>
+          <h3>Piscina infinita</h3>
+          <p>Una lámina de agua suspendida sobre la costa, abierta desde el amanecer.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <h3>Ubicación privilegiada</h3>
+          <p>A diez minutos del centro histórico y con acceso directo a una cala privada.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container about">
+      <div class="about__visual">
+        <div class="about__frame"></div>
+        <div class="about__note">
+          <strong>1924</strong>
+          <span>Año de fundación</span>
+        </div>
+      </div>
+      <div class="about__content">
+        <span class="eyebrow">Nuestra historia</span>
+        <h2>Un siglo recibiendo huéspedes como en casa</h2>
+        <p>NOVA Hotels nació como una villa familiar frente al mar. Hoy, cuatro generaciones después, seguimos cuidando el mismo detalle: que cada llegada se sienta como un regreso.</p>
+        <p>Hemos restaurado la casa original respetando su alma, añadiendo solo lo esencial para que tu estancia sea tan cómoda como memorable.</p>
+        <ul class="about__list">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Atención personalizada 24 h</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Restaurante de temporada</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Traslado privado al aeropuerto</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Experiencias locales exclusivas</li>
+        </ul>
+        <a class="btn btn--dark" href="habitaciones.html">Descubrir el hotel</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Huéspedes</span>
+        <h2>Lo que se llevan a casa</h2>
+      </div>
+
+      <div class="testimonial">
+        <article class="testimonial__card">
+          <div class="testimonial__stars">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+          </div>
+          <blockquote>"La suite Nova superó cualquier expectativa. El desayuno en la terraza, con el mar de fondo, es un recuerdo que no olvidaremos."</blockquote>
+          <div class="testimonial__author">
+            <span class="testimonial__avatar">CL</span>
+            <div>
+              <strong>Clara Lorenzo</strong>
+              <span>Madrid · Suite Nova</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial__card">
+          <div class="testimonial__stars">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+          </div>
+          <blockquote>"El trato del equipo hace la diferencia. Nos ayudaron a organizar cada detalle del viaje sin que tuviéramos que pedirlo."</blockquote>
+          <div class="testimonial__author">
+            <span class="testimonial__avatar">JM</span>
+            <div>
+              <strong>Javier Molina</strong>
+              <span>Barcelona · Suite Deluxe</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial__card">
+          <div class="testimonial__stars">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-6.8L2.5 9.3l6.6-1.04L12 2z"/></svg>
+          </div>
+          <blockquote>"Un hotel con alma. La piscina al atardecer y el restaurante son razones suficientes para volver cada verano."</blockquote>
+          <div class="testimonial__author">
+            <span class="testimonial__avatar">AS</span>
+            <div>
+              <strong>Ana Sáez</strong>
+              <span>Valencia · Habitación Clásica</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream section--tight">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <span class="eyebrow">Tu próxima escapada</span>
+          <h2>Las mejores fechas se reservan con tiempo</h2>
+          <p>Reserva directamente con nosotros y disfruta de cancelación flexible, desayuno incluido y acceso preferente al spa.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--gold" href="reservar.html">Comprobar disponibilidad</a>
+          <a class="btn btn--outline" href="login.html">Área de huéspedes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__col">
+          <a class="brand" href="index.html">
+            <span class="brand__mark">N</span>
+            <span class="brand__text">
+              <span class="brand__name">NOVA Hotels</span>
+              <span class="brand__tag">Hotel &amp; Resort</span>
+            </span>
+          </a>
+          <p>Un hotel boutique frente al mar donde cada estancia se convierte en un recuerdo. Costa Azul, Francia.</p>
+        </div>
+
+        <div class="site-footer__col">
+          <h4>El hotel</h4>
+          <div class="site-footer__links">
+            <a href="habitaciones.html">Habitaciones</a>
+            <a href="index.html#experiencias">Experiencias</a>
+            <a href="reservar.html">Reservas</a>
+            <a href="login.html">Área de huéspedes</a>
+          </div>
+        </div>
+
+        <div class="site-footer__col">
+          <h4>Servicios</h4>
+          <div class="site-footer__links">
+            <a href="#">Restaurante</a>
+            <a href="#">Spa &amp; bienestar</a>
+            <a href="#">Eventos privados</a>
+            <a href="#">Traslados</a>
+          </div>
+        </div>
+
+        <div class="site-footer__col">
+          <h4>Contacto</h4>
+          <ul class="site-footer__contact">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              12 Boulevard de la Mer, Costa Azul
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +33 1 84 80 20 20
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              reservas@novahotels.com
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>© 2026 NOVA Hotels. Todos los derechos reservados.</span>
+        <div class="site-footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 21c.5-2 1.5-5 1.8-6.4"/><path d="M10.6 14.4c-.6-1.4.2-3.4 2-3.4 1.5 0 2.2 1 2.2 2.3 0 1.8-1 3.5-2.4 3.5-.9 0-1.6-.7-1.4-1.6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
