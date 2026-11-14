@@ -109,9 +109,9 @@ spring.datasource.password=${DB_PASSWORD:}
 server.port=${SERVER_PORT:8080}
 ```
 
-En Azure se mantiene el mismo esquema que ya usaba el proyecto: definir `DB_URL`, `DB_USERNAME` y `DB_PASSWORD` en App Service, en el IDE o en el pipeline. En local, `scripts/floci-local.ps1` escribe `.env.floci` (ignorado por Git) y `scripts/run-local.ps1` lo carga.
+En Azure se mantiene el mismo esquema que ya usaba el proyecto: definir `DB_URL`, `DB_USERNAME` y `DB_PASSWORD` en App Service, en el IDE o en el pipeline. En local, `scripts/floci-local.ps1` escribe `.env.floci` (ignorado por Git), Spring Boot lo importa automáticamente con `spring.config.import=optional:file:.env.floci[.properties]` y `scripts/run-local.ps1` además lo exporta como variables de entorno antes de arrancar.
 
-> `.env.floci` no se versiona. La plantilla pública es `.env.example`.
+> `.env.floci` se escribe en UTF-8 sin BOM para que `DB_URL` sea la primera clave real del archivo. No se versiona. La plantilla pública es `.env.example`.
 
 ---
 
@@ -225,6 +225,7 @@ En Azure App Service puedes usar **Key Vault references** para `DB_PASSWORD` y `
 | Base `NovaHotelDB`, tablas creadas y 1 habitación persistida | [`docs/evidencias/02-sql-verificacion.txt`](docs/evidencias/02-sql-verificacion.txt) |
 | Spring Boot conectado: HikariCP, Tomcat y aplicación iniciada | [`docs/evidencias/03-springboot-startup.log`](docs/evidencias/03-springboot-startup.log) |
 | POST `201` y GET con la habitación persistida | [`docs/evidencias/04-api-crud.txt`](docs/evidencias/04-api-crud.txt) |
+| Arranque sin variables previas, importando solo `.env.floci` | [`docs/evidencias/05-springboot-import-env.log`](docs/evidencias/05-springboot-import-env.log) |
 
 Fragmentos clave:
 

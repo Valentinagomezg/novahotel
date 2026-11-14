@@ -103,7 +103,10 @@ function Set-EnvValue([string]$Key, [string]$Value) {
         $updated = @($updated) + "$Key=$Value"
     }
 
-    Set-Content -LiteralPath $EnvFile -Value $updated -Encoding UTF8
+    # Escribir UTF-8 sin BOM: Spring Boot y PowerShell deben leer DB_URL como
+    # primera clave sin caracteres invisibles.
+    $utf8SinBom = New-Object System.Text.UTF8Encoding($false)
+    [System.IO.File]::WriteAllLines($EnvFile, [string[]]@($updated), $utf8SinBom)
 }
 
 function Write-EnvFile([int]$Port) {

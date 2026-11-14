@@ -8,6 +8,7 @@ Estos archivos se generaron ejecutando el proyecto en este equipo con Docker Des
 | `02-sql-verificacion.txt` | La base `NovaHotelDB` existe y Hibernate creó las tablas `Habitaciones`, `Reservas`, `Roles` y `Usuarios`; además hay 1 habitación insertada. |
 | `03-springboot-startup.log` | Spring Boot arrancó, HikariCP completó el pool y Tomcat quedó escuchando en el puerto 8080. |
 | `04-api-crud.txt` | `POST /api/habitaciones` respondió `201` y `GET /api/habitaciones` devolvió la habitación persistida. |
+| `05-springboot-import-env.log` | Spring Boot arrancó sin variables previas en la shell, importando la conexión desde `.env.floci`. |
 
 ## Reproducir
 
